@@ -28,13 +28,10 @@ class Article(Content):
         self.headline = headline
         self.content = content
     def show(self):
-        print 'Contributors'.join(self.contributors)
-        print self.title
-        print self.month
-        print self.content
-        print self.year
-        print self.type
-        print self.day
+        print 'Contributors: ' + ', '.join(self.contributors)
+        print 'Headline: ' + self.headline
+        print 'Content: ' + self.content
+        print 'Creation Date: ' + self.creation_date
         
 # TODO: Define a Picture class that extends the Content class
 class Picture(Content):
@@ -45,11 +42,8 @@ class Picture(Content):
         self.path = path
         
     def show(self):
-        print 'Contributors'.join(self.contributors)
-        print self.title
-        print self.month
-        Image.open(self.path)
-        print self.caption
-        print self.year
-        print self.type
-        print self.day
+        print 'Contributors: ' + ', '.join(self.contributors)
+        print 'Title: ' + self.title
+        print 'Caption: ' + self.caption
+        print 'Creation Date: ' + self.creation_date
+        Image.open(self.path).show()
