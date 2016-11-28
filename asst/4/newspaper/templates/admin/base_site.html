@@ -1,0 +1,10 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | The Crimson: Django site admin
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">The Crimson: Content Administration</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
